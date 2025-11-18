@@ -1,0 +1,9 @@
+/build/
+*.iml
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+/local.properties
+*.dex
+*.bin 

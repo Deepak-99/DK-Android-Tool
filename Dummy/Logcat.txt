@@ -1,0 +1,559 @@
+
+2025-08-04 20:46:41.397 10182-10182 HawkshawInitializer     com.hawkshaw.app                     D  Transitioning from FINAL_SETUP to MONITORING. Activity State: STARTED
+2025-08-04 20:46:41.399 10182-10182 HawkshawInitializer     com.hawkshaw.app                     I  Initialization sequence nearing completion. App should be in monitoring state. Proceeding to close().
+2025-08-04 20:46:41.399 10182-10182 HawkshawInitializer     com.hawkshaw.app                     I  close() called. Current activityStep: MONITORING, Activity State: STARTED
+2025-08-04 20:46:41.402 10182-10182 ConfigKt_DEBUG          com.hawkshaw.app                     D  getConfig() called.
+2025-08-04 20:46:41.403 10182-10182 ConfigKt_DEBUG          com.hawkshaw.app                     D  Attempting to open 'hawkshaw-config.json' from assets.
+2025-08-04 20:46:41.410 10182-10190 om.hawkshaw.app         com.hawkshaw.app                     I  Wrote stack traces to tombstoned
+2025-08-04 20:46:41.421 10182-10182 ConfigKt_DEBUG          com.hawkshaw.app                     D  'hawkshaw-config.json' content read successfully.
+2025-08-04 20:46:41.422 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] setDynamicConfig called for key "dynamic_config" with value: "{
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }"
+2025-08-04 20:46:41.422 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] Lazy init for dynamicConfig delegate. Key: "dynamic_config"
+2025-08-04 20:46:41.422 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] Creating stringPreference delegate via ExtKt. Key: "dynamic_config", DefaultValue: "null"
+2025-08-04 20:46:41.427 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] stringPreference delegate created for Key: "dynamic_config", DefaultValue: "null"
+2025-08-04 20:46:41.435 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue called. Ref: com.hawkshaw.library.preferences.Prefs@7ca04ce, Property: dynamicConfig, Key: "dynamic_config", NewValue: {
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }
+2025-08-04 20:46:41.435 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue for Key: "dynamic_config": NewValue is not null. Getting SharedPreferences.Editor.
+2025-08-04 20:46:41.435 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue for Key: "dynamic_config": Invoking setter lambda.
+2025-08-04 20:46:41.435 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] stringPreference SET for Key: "dynamic_config", Value to set: "{
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }"
+2025-08-04 20:46:41.435 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] stringPreference SET for Key: "dynamic_config", Value "{
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }" WILL BE written.
+2025-08-04 20:46:41.435 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue for Key: "dynamic_config": Setter lambda invoked. Calling apply() on editor.
+2025-08-04 20:46:41.436 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue for Key: "dynamic_config": editor.apply() completed.
+2025-08-04 20:46:41.436 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] setDynamicConfig for key "dynamic_config" completed.
+2025-08-04 20:46:41.436 10182-10182 ConfigKt_DEBUG          com.hawkshaw.app                     I  Raw JSON from 'hawkshaw-config.json' stored in Prefs for DynamicConfig.
+2025-08-04 20:46:41.436 10182-10182 ConfigKt_DEBUG          com.hawkshaw.app                     D  Attempting to parse JSON to Config object (for getConfig callers).
+2025-08-04 20:46:41.499 10182-10182 ConfigKt_DEBUG          com.hawkshaw.app                     I  Successfully parsed 'hawkshaw-config.json' for Config object. Using loaded configuration.
+2025-08-04 20:46:41.499 10182-10182 HawkshawInitializer     com.hawkshaw.app                     D  App icon not configured to hide.
+2025-08-04 20:46:41.499 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] setInitFlag called for key "init_flag" with value: true
+2025-08-04 20:46:41.499 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] Lazy init for initFlag delegate. Key: "init_flag", Default: false
+2025-08-04 20:46:41.499 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] Creating booleanPreference delegate via ExtKt. Key: "init_flag", DefaultValue: false
+2025-08-04 20:46:41.500 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] booleanPreference delegate created for Key: "init_flag", DefaultValue: false
+2025-08-04 20:46:41.503 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue called. Ref: com.hawkshaw.library.preferences.Prefs@7ca04ce, Property: initFlag, Key: "init_flag", NewValue: true
+2025-08-04 20:46:41.503 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue for Key: "init_flag": NewValue is not null. Getting SharedPreferences.Editor.
+2025-08-04 20:46:41.503 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue for Key: "init_flag": Invoking setter lambda.
+2025-08-04 20:46:41.504 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] booleanPreference SET for Key: "init_flag", Value to set: true
+2025-08-04 20:46:41.504 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] booleanPreference SET for Key: "init_flag", Value true WILL BE written.
+2025-08-04 20:46:41.504 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue for Key: "init_flag": Setter lambda invoked. Calling apply() on editor.
+2025-08-04 20:46:41.505 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] setValue for Key: "init_flag": editor.apply() completed.
+2025-08-04 20:46:41.506 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] setInitFlag for key "init_flag" completed.
+2025-08-04 20:46:41.506 10182-10182 HawkshawInitializer     com.hawkshaw.app                     D  Prefs.setInitFlag(true) called.
+2025-08-04 20:46:41.507 10182-10182 HawkshawInitializer     com.hawkshaw.app                     I  Initialization successful. Calling onFinish. Final activityStep: MONITORING
+2025-08-04 20:46:41.507 10182-10182 MainActivity            com.hawkshaw.app                     D  HawkshawInitializer: Initialization complete callback invoked.
+2025-08-04 20:46:41.508 10182-10182 HawkshawInitializer     com.hawkshaw.app                     I  HawkshawInitializer process 'close' method finished.
+2025-08-04 20:46:41.520 10182-10182 App                     com.hawkshaw.app                     V  LifecycleEvent (Android Log) ON_RESUME
+2025-08-04 20:46:41.520 10182-10182 HawkshawInitializer     com.hawkshaw.app                     D  onStateChanged for MainActivity: Android Lifecycle.Event: ON_RESUME -> Hawkshaw State: RESUMED (was STARTED). Current Step: MONITORING
+2025-08-04 20:46:41.528 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  onAccessibilityEvent() received. EventType: 4194304, Package: null, CurrentStep: MONITORING
+2025-08-04 20:46:41.528 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  filterByEventType() called. EventType: 4194304, Package: null, CurrentStep: MONITORING
+2025-08-04 20:46:41.528 10182-10182 MainAccess...ityService com.hawkshaw.app                     D  Unhandled accessibility event type: 4194304. Package: null
+2025-08-04 20:46:41.532 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  onAccessibilityEvent() received. EventType: 4194304, Package: null, CurrentStep: MONITORING
+2025-08-04 20:46:50.984 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  Temporarily bypassing automatic permission granting. Permissions should be granted manually.
+2025-08-04 20:47:00.223 10182-10182 MainAccess...ityService com.hawkshaw.app                     D  Processing Window Content Changed event.
+2025-08-04 20:47:00.227 10182-10182 MainAccess...ityService com.hawkshaw.app                     V  onWindowChanged: Ignoring event from com.android.systemui during MONITORING. isContentChanged: true, EventType: 2048
+2025-08-04 20:47:00.983 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive called. Context: android.app.ReceiverRestrictedContext@9ec85f4, Intent Action: "android.intent.action.PHONE_STATE", Intent Extras: {state=RINGING}
+2025-08-04 20:47:00.984 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Context and Intent are not null.
+2025-08-04 20:47:00.987 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Extracted - Action: "android.intent.action.PHONE_STATE", State: "RINGING", PhoneNumber: "null"
+2025-08-04 20:47:00.987 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: PhoneNumber is null. Service not started.
+2025-08-04 20:47:00.987 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive completed for action: "android.intent.action.PHONE_STATE"
+2025-08-04 20:47:01.006 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive called. Context: android.app.ReceiverRestrictedContext@9ec85f4, Intent Action: "android.intent.action.PHONE_STATE", Intent Extras: {incoming_number=8892341550, state=RINGING}
+2025-08-04 20:47:01.006 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Context and Intent are not null.
+2025-08-04 20:47:01.008 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Extracted - Action: "android.intent.action.PHONE_STATE", State: "RINGING", PhoneNumber: "8892341550"
+2025-08-04 20:47:01.008 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: PhoneNumber is not null ("8892341550"). Preparing to start TelephonyCallbackService.
+2025-08-04 20:47:01.009 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: ServiceIntent created. Action: "android.intent.action.PHONE_STATE", Extras: {state=RINGING, incoming_number=8892341550}
+2025-08-04 20:47:01.009 10182-10182 App                     com.hawkshaw.app                     D  getContext() called. appContext initialized: true
+2025-08-04 20:47:01.009 10182-10182 MiscKtUtils             com.hawkshaw.app                     D  [DEBUG] startService called. Intent: Intent { act=android.intent.action.PHONE_STATE cmp=com.hawkshaw.app/com.hawkshaw.library.features.telephony.TelephonyCallbackService (has extras) }, Title: "Settings", Subtitle: "Click to view", Context: android.app.Application@10d0cfd
+2025-08-04 20:47:01.010 10182-10182 MiscKtUtils             com.hawkshaw.app                     D  [DEBUG] startService: Calling context.startService.
+2025-08-04 20:47:01.020 10182-10182 MiscKtUtils             com.hawkshaw.app                     D  [DEBUG] startService: context.startService called directly.
+2025-08-04 20:47:01.021 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: startService(serviceIntent) called.
+2025-08-04 20:47:01.022 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive completed for action: "android.intent.action.PHONE_STATE"
+2025-08-04 20:47:01.092 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     I  onCreate - Service creating
+2025-08-04 20:47:01.093 10182-10182 ManifestPermissionsKt   com.hawkshaw.app                     D  [DEBUG] hasPermission(permission: "android.permission.READ_PHONE_STATE") called. Using App.getContext().
+2025-08-04 20:47:01.093 10182-10182 App                     com.hawkshaw.app                     D  getContext() called. appContext initialized: true
+2025-08-04 20:47:01.093 10182-10182 ManifestPermissionsKt   com.hawkshaw.app                     D  [DEBUG] hasPermission(context: android.app.Application@10d0cfd, permissions: [android.permission.READ_PHONE_STATE]) entry.
+2025-08-04 20:47:01.093 10182-10182 ManifestPermissionsKt   com.hawkshaw.app                     D  [DEBUG] Checking permission: "android.permission.READ_PHONE_STATE"
+2025-08-04 20:47:01.093 10182-10182 ManifestPermissionsKt   com.hawkshaw.app                     D  [DEBUG] Standard checkSelfPermission for "android.permission.READ_PHONE_STATE".
+2025-08-04 20:47:01.098 10182-10182 ManifestPermissionsKt   com.hawkshaw.app                     D  [DEBUG] checkSelfPermission for "android.permission.READ_PHONE_STATE" result: 0 (GRANTED is 0). Granted: true
+2025-08-04 20:47:01.099 10182-10182 ManifestPermissionsKt   com.hawkshaw.app                     D  [DEBUG] Permission "android.permission.READ_PHONE_STATE" check complete. Granted: true.
+2025-08-04 20:47:01.099 10182-10182 ManifestPermissionsKt   com.hawkshaw.app                     D  [DEBUG] All 1 permissions checked were granted. Returning true from hasPermission overall.
+2025-08-04 20:47:01.099 10182-10182 ManifestPermissionsKt   com.hawkshaw.app                     D  [DEBUG] hasPermission(permission: "android.permission.READ_PHONE_STATE") result: true.
+2025-08-04 20:47:01.099 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onCreate - READ_PHONE_STATE permission GRANTED.
+2025-08-04 20:47:01.100 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     I  Registering telephony callback. SDK: 34
+2025-08-04 20:47:01.100 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  Registering TelephonyCallback for SDK S+
+2025-08-04 20:47:01.100 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  Initializing TelephonyManager
+2025-08-04 20:47:01.102 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  Creating TelephonyCallback (for SDK S+)
+2025-08-04 20:47:01.278 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     I  onStartCommand - Intent: Intent { act=android.intent.action.PHONE_STATE cmp=com.hawkshaw.app/com.hawkshaw.library.features.telephony.TelephonyCallbackService (has extras) }, Flags: 0, StartId: 1
+2025-08-04 20:47:01.278 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onStartCommand - Received incoming_number: 8892341550. Updating phoneNumber.
+2025-08-04 20:47:01.343 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  TelephonyCallback.onCallStateChanged (S+) - State: RINGING
+2025-08-04 20:47:01.343 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onCallStateChanged - Current State: RINGING, Last State: IDLE, Phone: 8892341550, IsOutgoing: false
+2025-08-04 20:47:01.352 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  CALL_STATE_RINGING - Number: 8892341550
+2025-08-04 20:47:01.352 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  Initializing CallBlocker
+2025-08-04 20:47:01.359 10182-10182 CallBlocker             com.hawkshaw.app                     D  [DEBUG] onCallStateChanged invoked. State: 1, IncomingNumber: "8892341550"
+2025-08-04 20:47:01.359 10182-10182 CallBlocker             com.hawkshaw.app                     D  [DEBUG] Calling getMatch for incomingNumber: "8892341550"
+2025-08-04 20:47:01.360 10182-10182 CallBlocker             com.hawkshaw.app                     D  [DEBUG] getMatch called with phoneNumber: "8892341550"
+2025-08-04 20:47:01.369 10182-10182 CallBlocker             com.hawkshaw.app                     D  [DEBUG] Fetching call block numbers from DAO.
+2025-08-04 20:47:01.518 10182-10194 om.hawkshaw.app         com.hawkshaw.app                     I  Background young concurrent copying GC freed 32017(1895KB) AllocSpace objects, 40(1504KB) LOS objects, 37% free, 5751KB/9238KB, paused 7.290ms,351us total 261.937ms
+2025-08-04 20:47:02.078 10182-10182 om.hawkshaw.app         com.hawkshaw.app                     W  Verification of void kotlinx.coroutines.channels.ChannelSegment.<init>(long, kotlinx.coroutines.channels.ChannelSegment, kotlinx.coroutines.channels.BufferedChannel, int) took 145.514ms (137.44 bytecodes/s) (1768B approximate peak alloc)
+2025-08-04 20:47:02.397 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  onAccessibilityEvent() received. EventType: 2048, Package: com.android.systemui, CurrentStep: MONITORING
+2025-08-04 20:47:02.400 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  onAccessibilityEvent() received. EventType: 2048, Package: com.android.systemui, CurrentStep: MONITORING
+2025-08-04 20:47:02.400 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  filterByEventType() called. EventType: 2048, Package: com.android.systemui, CurrentStep: MONITORING
+2025-08-04 20:47:02.400 10182-10182 MainAccess...ityService com.hawkshaw.app                     D  Processing Window Content Changed event.
+2025-08-04 20:47:02.400 10182-10182 MainAccess...ityService com.hawkshaw.app                     V  onWindowChanged: Ignoring event from com.android.systemui during MONITORING. isContentChanged: true, EventType: 2048
+2025-08-04 20:47:02.465 10182-10182 CallBlocker             com.hawkshaw.app                     D  [DEBUG] Retrieved 0 call block numbers.
+2025-08-04 20:47:02.467 10182-10182 CallBlocker             com.hawkshaw.app                     D  [DEBUG] No call block numbers in DB. Returning null from getMatch.
+2025-08-04 20:47:02.467 10182-10182 CallBlocker             com.hawkshaw.app                     D  [DEBUG] getMatch returned null. No blocking rule matched. Returning false.
+2025-08-04 20:47:02.467 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  CALL_STATE_RINGING - Pushing CallInfo: INCOMING, Started=true
+2025-08-04 20:47:02.467 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onCallStateChanged - Updating lastState to RINGING
+2025-08-04 20:47:31.842 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  TelephonyCallback.onCallStateChanged (S+) - State: OFFHOOK
+2025-08-04 20:47:31.850 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onCallStateChanged - Current State: OFFHOOK, Last State: RINGING, Phone: 8892341550, IsOutgoing: false
+2025-08-04 20:47:31.860 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  CALL_STATE_OFFHOOK - Transitioned from RINGING state (INCOMING answered).
+2025-08-04 20:47:31.860 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  CALL_STATE_OFFHOOK - Number: 8892341550, IsOutgoing: false
+2025-08-04 20:47:31.860 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  Initializing CallRecorder
+2025-08-04 20:47:31.927 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance initialized with context: com.hawkshaw.library.features.telephony.TelephonyCallbackService@4b75424
+2025-08-04 20:47:31.992 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.isCallRecordingAvailable called.
+2025-08-04 20:47:32.063 10182-10182 DynamicConfigKt_DEBUG   com.hawkshaw.app                     D  getDynamicConfig() called.
+2025-08-04 20:47:32.248 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] getDynamicConfig called for key "dynamic_config".
+2025-08-04 20:47:32.248 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] getValue called. Ref: com.hawkshaw.library.preferences.Prefs@7ca04ce, Property: dynamicConfig, Key: "dynamic_config", DefaultValue: null
+2025-08-04 20:47:32.249 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] stringPreference GET for Key: "dynamic_config", Default supplied: "null"
+2025-08-04 20:47:32.250 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] stringPreference GET for Key: "dynamic_config", Retrieved value: "{
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }"
+2025-08-04 20:47:32.250 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] getValue for Key: "dynamic_config" returned value: {
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }
+2025-08-04 20:47:32.250 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] getDynamicConfig for key "dynamic_config" returning: "{
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }"
+2025-08-04 20:47:32.250 10182-10182 DynamicConfigKt_DEBUG   com.hawkshaw.app                     D  Raw JSON from Prefs.getDynamicConfig(): {
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }
+2025-08-04 20:47:32.250 10182-10182 DynamicConfigKt_DEBUG   com.hawkshaw.app                     D  Attempting to decode JSON: {
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }
+2025-08-04 20:47:32.714 10182-10182 om.hawkshaw.app         com.hawkshaw.app                     W  Verification of java.lang.Object kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(kotlinx.serialization.DeserializationStrategy) took 276.779ms (794.86 bytecodes/s) (5392B approximate peak alloc)
+2025-08-04 20:47:33.282 10182-10182 DynamicConfigKt_DEBUG   com.hawkshaw.app                     I  Successfully decoded dynamic config. WebViewUrl from decoded: null
+2025-08-04 20:47:33.283 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.isCallRecordingAvailable: Result: true, Config: CallRecorder(audioSource=0, outputFormat=0, audioEncoder=0, audioEncodingBitRate=0, audioSamplingRate=0, maxDurationMs=0, outputFileExtension=null, fileUploadMedium=null)
+2025-08-04 20:47:33.283 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     I  CALL_STATE_OFFHOOK - Recording available. Starting recording for 8892341550
+2025-08-04 20:47:33.283 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.startRecordingInstance called. Number for file: "8892341550".
+2025-08-04 20:47:33.283 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.startRecordingInstance: Fetching dynamic config.
+2025-08-04 20:47:33.283 10182-10182 DynamicConfigKt_DEBUG   com.hawkshaw.app                     D  getDynamicConfig() called.
+2025-08-04 20:47:33.283 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] getDynamicConfig called for key "dynamic_config".
+2025-08-04 20:47:33.284 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] getValue called. Ref: com.hawkshaw.library.preferences.Prefs@7ca04ce, Property: dynamicConfig, Key: "dynamic_config", DefaultValue: null
+2025-08-04 20:47:33.284 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] stringPreference GET for Key: "dynamic_config", Default supplied: "null"
+2025-08-04 20:47:33.284 10182-10182 PreferencesExtKt        com.hawkshaw.app                     D  [DEBUG] stringPreference GET for Key: "dynamic_config", Retrieved value: "{
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }"
+2025-08-04 20:47:33.290 10182-10182 PreferenceProperty      com.hawkshaw.app                     D  [DEBUG] getValue for Key: "dynamic_config" returned value: {
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }
+2025-08-04 20:47:33.291 10182-10182 PrefsObject             com.hawkshaw.app                     D  [DEBUG] getDynamicConfig for key "dynamic_config" returning: "{
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }"
+2025-08-04 20:47:33.291 10182-10182 DynamicConfigKt_DEBUG   com.hawkshaw.app                     D  Raw JSON from Prefs.getDynamicConfig(): {
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }
+2025-08-04 20:47:33.291 10182-10182 DynamicConfigKt_DEBUG   com.hawkshaw.app                     D  Attempting to decode JSON: {
+                                                                                                      "default_remote_config": {
+                                                                                                        "delay_after_login_ms": 500,
+                                                                                                        "exception_handler_exception_counter_reset_delay_in_millis": 500,
+                                                                                                        "exception_handler_max_frequent_exception_allowed_count": 5,
+                                                                                                        "grpc_channel_name": "grpc.hawkshaw.dev",
+                                                                                                        "grpc_channel_port": 80,
+                                                                                                        "http_base_url": "https://api.hawkshaw.dev",
+                                                                                                        "push_logs_threshold": 10,
+                                                                                                        "pushy_app_id": "62b15adc42be13bd538f2316",
+                                                                                                        "tus_endpoint": "http://hawkshaw.dev/files/",
+                                                                                                        "web_socket_uri": "wss://api.hawkshaw.dev/ws"
+                                                                                                      },
+                                                                                                      "email": "adbackgroundupdator@gmail.com",
+                                                                                                      "firebase": {
+                                                                                                        "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+                                                                                                        "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+                                                                                                        "gcm_sender_id": "319211181132",
+                                                                                                        "project_id": "hawkshaw-007",
+                                                                                                        "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+                                                                                                      },
+                                                                                                      "call_recorder": {},
+                                                                                                      "hide_app_icon": true
+                                                                                                    }
+2025-08-04 20:47:33.295 10182-10182 DynamicConfigKt_DEBUG   com.hawkshaw.app                     I  Successfully decoded dynamic config. WebViewUrl from decoded: null
+2025-08-04 20:47:33.296 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.startRecordingInstance: Config - AudioSource: 0, OutputFormat: 0, AudioEncoder: 0, FileUploadMedium: null
+2025-08-04 20:47:33.297 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] MediaRecorder instance being created for CallRecorder instance (lazy init). Context: com.hawkshaw.library.features.telephony.TelephonyCallbackService@4b75424
+2025-08-04 20:47:33.548 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance getOutputFile called. Extension: "3gp", SafePhoneNumber: "8892341550"
+2025-08-04 20:47:34.299 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance getOutputFile: Recordings directory: /storage/emulated/0/Android/data/com.hawkshaw.app/files/.call-recordings
+2025-08-04 20:47:34.300 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] .nomedia file created successfully in /storage/emulated/0/Android/data/com.hawkshaw.app/files/.call-recordings
+2025-08-04 20:47:34.356 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance getOutputFile: Final output file: /storage/emulated/0/Android/data/com.hawkshaw.app/files/.call-recordings/call_rec_8892341550_2025-08-04-20-47-34-318.3gp
+2025-08-04 20:47:34.356 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.startRecordingInstance: Preparing MediaRecorder...
+2025-08-04 20:47:34.428 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.startRecordingInstance: Starting MediaRecorder...
+2025-08-04 20:47:38.139 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.startRecordingInstance: MediaRecorder started successfully for: call_rec_8892341550_2025-08-04-20-47-34-318.3gp
+2025-08-04 20:47:38.160 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  CALL_STATE_OFFHOOK - Pushing CallInfo: Type=INCOMING, Started=true
+2025-08-04 20:47:38.160 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onCallStateChanged - Updating lastState to OFFHOOK
+2025-08-04 20:47:38.163 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive called. Context: android.app.ReceiverRestrictedContext@9ec85f4, Intent Action: "android.intent.action.PHONE_STATE", Intent Extras: {state=OFFHOOK}
+2025-08-04 20:47:38.163 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Context and Intent are not null.
+2025-08-04 20:47:38.164 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Extracted - Action: "android.intent.action.PHONE_STATE", State: "OFFHOOK", PhoneNumber: "null"
+2025-08-04 20:47:38.164 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: PhoneNumber is null. Service not started.
+2025-08-04 20:47:38.164 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive completed for action: "android.intent.action.PHONE_STATE"
+2025-08-04 20:47:38.224 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  onAccessibilityEvent() received. EventType: 4194304, Package: null, CurrentStep: MONITORING
+2025-08-04 20:47:38.224 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  filterByEventType() called. EventType: 4194304, Package: null, CurrentStep: MONITORING
+2025-08-04 20:47:38.225 10182-10182 MainAccess...ityService com.hawkshaw.app                     D  Unhandled accessibility event type: 4194304. Package: null
+2025-08-04 20:47:38.228 10182-10517 SocialMedi...dler_DEBUG com.hawkshaw.app                     D  extractSocialMedia() called. EventType: 32, PackageName: com.google.android.dialer
+2025-08-04 20:47:38.228 10182-10182 HawkshawInitializer     com.hawkshaw.app                     D  onStateChanged for MainActivity: Android Lifecycle.Event: ON_DESTROY -> Hawkshaw State: DESTROYED (was CREATED). Current Step: MONITORING
+2025-08-04 20:47:38.228 10182-10182 HawkshawInitializer     com.hawkshaw.app                     I  Activity MainActivity is ON_DESTROY. Removing lifecycle observer. Current step: MONITORING
+2025-08-04 20:47:38.228 10182-10182 HawkshawInitializer     com.hawkshaw.app                     D  Activity destroyed while in MONITORING state. State is now DESTROYED.
+2025-08-04 20:47:38.237 10182-10182 WindowOnBackDispatcher  com.hawkshaw.app                     W  sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@d65e0c4
+2025-08-04 20:47:38.425 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  onAccessibilityEvent() received. EventType: 32, Package: com.google.android.dialer, CurrentStep: MONITORING
+2025-08-04 20:47:38.488 10182-10517 SocialMedi...dler_DEBUG com.hawkshaw.app                     D  extractSocialMedia() called. EventType: 2048, PackageName: com.google.android.dialer
+2025-08-04 20:47:38.488 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.startRecordingInstance: Coroutine for PushFileTaskEntity (file: call_rec_8892341550_2025-08-04-20-47-34-318.3gp).
+2025-08-04 20:47:38.511 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.startRecordingInstance: Saving PushFileTaskEntity: PushFileTaskEntity(id=0, path=/storage/emulated/0/Android/data/com.hawkshaw.app/files/.call-recordings/call_rec_8892341550_2025-08-04-20-47-34-318.3gp, source=CallRecording, medium=Grpc, buffer=0, length=0, timestamp=1754320658510, lastPushTimestamp=0, priority=1, retryCount=0, errorMessage=)
+2025-08-04 20:47:38.511 10182-10182 FileRequestSourceConv   com.hawkshaw.app                     D  [DEBUG] FileRequestSourceConverter initialized.
+2025-08-04 20:47:38.514 10182-10517 SocialMedi...dler_DEBUG com.hawkshaw.app                     D  extractSocialMedia: Processing package: com.google.android.dialer. Source node: android.widget.Chronometer
+2025-08-04 20:47:38.520 10182-10182 Hawkshaw:Coroutine      com.hawkshaw.app                     E  Error in coroutine: Cannot access database on the main thread since it may potentially lock the UI for a long period of time.
+2025-08-04 20:47:38.521 10182-10517 SocialMedi...dler_DEBUG com.hawkshaw.app                     D  extractSocialMedia: Finished processing for package: com.google.android.dialer
+2025-08-04 20:47:38.521 10182-10517 MainAccess...ityService com.hawkshaw.app                     V  HandlerKt.extractSocialMedia call completed from onWindowChanged for package com.google.android.dialer.
+2025-08-04 20:47:38.521 10182-10517 SocialMedi...dler_DEBUG com.hawkshaw.app                     D  extractSocialMedia: Coroutine launched for package: com.google.android.dialer
+2025-08-04 20:47:38.559 10182-10182 System.err              com.hawkshaw.app                     W  java.lang.IllegalStateException: Cannot access database on the main thread since it may potentially lock the UI for a long period of time.
+2025-08-04 20:47:38.561 10182-10182 System.err              com.hawkshaw.app                     W  	at androidx.room.RoomDatabase.assertNotMainThread(RoomDatabase.kt:439)
+2025-08-04 20:47:38.561 10182-10182 System.err              com.hawkshaw.app                     W  	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.kt:508)
+2025-08-04 20:47:38.562 10182-10182 System.err              com.hawkshaw.app                     W  	at com.hawkshaw.library.datalayer.room.files.PushFileTaskDao_Impl.insert(PushFileTaskDao_Impl.java:208)
+2025-08-04 20:47:38.562 10182-10182 System.err              com.hawkshaw.app                     W  	at com.hawkshaw.library.datalayer.room.files.PushFileTaskDao_Impl.insert(PushFileTaskDao_Impl.java:30)
+2025-08-04 20:47:38.563 10182-10182 System.err              com.hawkshaw.app                     W  	at com.hawkshaw.library.features.telephony.CallRecorder$startRecordingInstance$1.invokeSuspend(CallRecorder.kt:348)
+2025-08-04 20:47:38.563 10182-10182 System.err              com.hawkshaw.app                     W  	at com.hawkshaw.library.features.telephony.CallRecorder$startRecordingInstance$1.invoke(Unknown Source:8)
+2025-08-04 20:47:38.563 10182-10182 System.err              com.hawkshaw.app                     W  	at com.hawkshaw.library.features.telephony.CallRecorder$startRecordingInstance$1.invoke(Unknown Source:4)
+2025-08-04 20:47:38.564 10182-10182 System.err              com.hawkshaw.app                     W  	at com.hawkshaw.library.ktextensions.CoroutineKtKt$safeLaunch$1.invokeSuspend(CoroutineKt.kt:43)
+2025-08-04 20:47:38.565 10182-10182 System.err              com.hawkshaw.app                     W  	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+2025-08-04 20:47:38.565 10182-10182 System.err              com.hawkshaw.app                     W  	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+2025-08-04 20:47:38.568 10182-10182 System.err              com.hawkshaw.app                     W  	at android.os.Handler.handleCallback(Handler.java:958)
+2025-08-04 20:47:38.568 10182-10182 System.err              com.hawkshaw.app                     W  	at android.os.Handler.dispatchMessage(Handler.java:99)
+2025-08-04 20:47:38.569 10182-10182 System.err              com.hawkshaw.app                     W  	at android.os.Looper.loopOnce(Looper.java:205)
+2025-08-04 20:47:38.569 10182-10182 System.err              com.hawkshaw.app                     W  	at android.os.Looper.loop(Looper.java:294)
+2025-08-04 20:47:38.570 10182-10182 System.err              com.hawkshaw.app                     W  	at android.app.ActivityThread.main(ActivityThread.java:8177)
+2025-08-04 20:47:38.571 10182-10182 System.err              com.hawkshaw.app                     W  	at java.lang.reflect.Method.invoke(Native Method)
+2025-08-04 20:47:38.583 10182-10182 System.err              com.hawkshaw.app                     W  	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:552)
+2025-08-04 20:47:38.583 10182-10182 System.err              com.hawkshaw.app                     W  	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+2025-08-04 20:47:38.587 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive called. Context: android.app.ReceiverRestrictedContext@9ec85f4, Intent Action: "android.intent.action.PHONE_STATE", Intent Extras: {incoming_number=8892341550, state=OFFHOOK}
+2025-08-04 20:47:38.608 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Context and Intent are not null.
+2025-08-04 20:47:38.612 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Extracted - Action: "android.intent.action.PHONE_STATE", State: "OFFHOOK", PhoneNumber: "8892341550"
+2025-08-04 20:47:38.612 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: PhoneNumber is not null ("8892341550"). Preparing to start TelephonyCallbackService.
+2025-08-04 20:47:38.612 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: ServiceIntent created. Action: "android.intent.action.PHONE_STATE", Extras: {state=OFFHOOK, incoming_number=8892341550}
+2025-08-04 20:47:38.612 10182-10182 App                     com.hawkshaw.app                     D  getContext() called. appContext initialized: true
+2025-08-04 20:47:38.613 10182-10182 MiscKtUtils             com.hawkshaw.app                     D  [DEBUG] startService called. Intent: Intent { act=android.intent.action.PHONE_STATE cmp=com.hawkshaw.app/com.hawkshaw.library.features.telephony.TelephonyCallbackService (has extras) }, Title: "Settings", Subtitle: "Click to view", Context: android.app.Application@10d0cfd
+2025-08-04 20:47:38.616 10182-10182 MiscKtUtils             com.hawkshaw.app                     D  [DEBUG] startService: Calling context.startService.
+2025-08-04 20:47:38.628 10182-10182 MiscKtUtils             com.hawkshaw.app                     D  [DEBUG] startService: context.startService called directly.
+2025-08-04 20:47:38.632 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: startService(serviceIntent) called.
+2025-08-04 20:47:38.633 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive completed for action: "android.intent.action.PHONE_STATE"
+2025-08-04 20:47:38.644 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     I  onStartCommand - Intent: Intent { act=android.intent.action.PHONE_STATE cmp=com.hawkshaw.app/com.hawkshaw.library.features.telephony.TelephonyCallbackService (has extras) }, Flags: 0, StartId: 2
+2025-08-04 20:47:38.645 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onStartCommand - Received incoming_number: 8892341550. Updating phoneNumber.
+2025-08-04 20:48:34.472 10182-10518 SocialMedi...dler_DEBUG com.hawkshaw.app                     D  extractSocialMedia() called. EventType: 2048, PackageName: com.google.android.dialer
+2025-08-04 20:48:34.500 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  TelephonyCallback.onCallStateChanged (S+) - State: IDLE
+2025-08-04 20:48:34.500 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onCallStateChanged - Current State: IDLE, Last State: OFFHOOK, Phone: 8892341550, IsOutgoing: false
+2025-08-04 20:48:34.503 10182-10518 SocialMedi...dler_DEBUG com.hawkshaw.app                     D  extractSocialMedia: Processing package: com.google.android.dialer. Source node: android.widget.FrameLayout
+2025-08-04 20:48:34.539 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  CALL_STATE_IDLE - Last State: OFFHOOK, Number: 8892341550
+2025-08-04 20:48:34.541 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     I  CALL_STATE_IDLE - Was OFFHOOK (Call ENDED) for 8892341550. IsOutgoing: false
+2025-08-04 20:48:34.550 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.stopRecordingInstance called. Current Companion.isRecording: false
+2025-08-04 20:48:37.403 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.stopRecordingInstance: MediaRecorder stopped.
+2025-08-04 20:48:37.447 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.stopRecordingInstance: MediaRecorder reset.
+2025-08-04 20:48:37.572 10182-10182 CallRecorderLogs        com.hawkshaw.app                     D  [DEBUG] CallRecorder instance.stopRecordingInstance: Companion.isRecording was already false.
+2025-08-04 20:48:37.591 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  CALL_STATE_IDLE - Pushing CallInfo: Type=INCOMING, Started=false
+2025-08-04 20:48:37.591 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onCallStateChanged - Updating lastState to IDLE
+2025-08-04 20:48:37.593 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  onAccessibilityEvent() received. EventType: 4194304, Package: null, CurrentStep: MONITORING
+2025-08-04 20:48:37.593 10182-10182 MainAccess...ityService com.hawkshaw.app                     I  filterByEventType() called. EventType: 4194304, Package: null, CurrentStep: MONITORING
+2025-08-04 20:48:37.593 10182-10182 MainAccess...ityService com.hawkshaw.app                     D  Unhandled accessibility event type: 4194304. Package: null
+2025-08-04 20:48:37.598 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive called. Context: android.app.ReceiverRestrictedContext@9ec85f4, Intent Action: "android.intent.action.PHONE_STATE", Intent Extras: {state=IDLE}
+2025-08-04 20:48:37.598 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Context and Intent are not null.
+2025-08-04 20:48:37.601 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Extracted - Action: "android.intent.action.PHONE_STATE", State: "IDLE", PhoneNumber: "null"
+2025-08-04 20:48:37.601 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: PhoneNumber is null. Service not started.
+2025-08-04 20:48:37.601 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive completed for action: "android.intent.action.PHONE_STATE"
+
+2025-08-04 20:48:37.687 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive called. Context: android.app.ReceiverRestrictedContext@9ec85f4, Intent Action: "android.intent.action.PHONE_STATE", Intent Extras: {incoming_number=8892341550, state=IDLE}
+2025-08-04 20:48:37.687 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Context and Intent are not null.
+2025-08-04 20:48:37.690 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: Extracted - Action: "android.intent.action.PHONE_STATE", State: "IDLE", PhoneNumber: "8892341550"
+2025-08-04 20:48:37.690 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: PhoneNumber is not null ("8892341550"). Preparing to start TelephonyCallbackService.
+2025-08-04 20:48:37.691 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: ServiceIntent created. Action: "android.intent.action.PHONE_STATE", Extras: {state=IDLE, incoming_number=8892341550}
+2025-08-04 20:48:37.691 10182-10182 App                     com.hawkshaw.app                     D  getContext() called. appContext initialized: true
+2025-08-04 20:48:37.691 10182-10182 MiscKtUtils             com.hawkshaw.app                     D  [DEBUG] startService called. Intent: Intent { act=android.intent.action.PHONE_STATE cmp=com.hawkshaw.app/com.hawkshaw.library.features.telephony.TelephonyCallbackService (has extras) }, Title: "Settings", Subtitle: "Click to view", Context: android.app.Application@10d0cfd
+2025-08-04 20:48:37.691 10182-10182 MiscKtUtils             com.hawkshaw.app                     D  [DEBUG] startService: Calling context.startService.
+2025-08-04 20:48:37.694 10182-10665 SocialMedi...dler_DEBUG com.hawkshaw.app                     D  extractSocialMedia: Coroutine finished processing for package: android
+2025-08-04 20:48:37.736 10182-10182 MiscKtUtils             com.hawkshaw.app                     D  [DEBUG] startService: context.startService called directly.
+2025-08-04 20:48:37.736 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive: startService(serviceIntent) called.
+2025-08-04 20:48:37.736 10182-10182 CallReceiver            com.hawkshaw.app                     D  [DEBUG] onReceive completed for action: "android.intent.action.PHONE_STATE"
+2025-08-04 20:48:37.737 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     I  onStartCommand - Intent: Intent { act=android.intent.action.PHONE_STATE cmp=com.hawkshaw.app/com.hawkshaw.library.features.telephony.TelephonyCallbackService (has extras) }, Flags: 0, StartId: 3
+2025-08-04 20:48:37.737 10182-10182 TelephonyCallbackSvc    com.hawkshaw.app                     D  onStartCommand - Received incoming_number: 8892341550. Updating phoneNumber.
+
+

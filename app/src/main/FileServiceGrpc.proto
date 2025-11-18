@@ -1,0 +1,76 @@
+syntax = "proto3";
+package filecrud;
+option go_package = "build/app/media/filecrud";
+option java_package = "com.hawkshaw.library";
+
+option java_multiple_files = true;
+option java_outer_classname = "HelloWorldProto";
+
+service FileService {
+  rpc UploadFile(stream FileUploadRequest) returns(FileUploadResponse);
+  rpc BatchThumbUpload(stream BatchThumbUploadRequest) returns(BatchThumbUploadResponse);
+}
+
+message FileUploadRequest {
+
+  message MetaData{
+
+    enum Source {
+      Unknown = 0;
+      CameraImage = 1;
+      VideoRecording = 2;
+      AudioRecording = 3;
+      Screenshot = 4;
+      ScreenRecording = 5;
+      FileExplorer = 6;
+      CallRecording = 7;
+    }
+
+    string name = 1;
+    string path = 2;
+    string mime = 3;
+    Source source = 4;
+  }
+
+  message File{
+    bytes content = 1;
+  }
+
+  oneof request {
+    MetaData metadata = 1;
+    File file = 2;
+  }
+}
+
+message FileUploadResponse {
+
+  enum Status {
+    PENDING = 0;
+    IN_PROGRESS = 1;
+    SUCCESS = 2;
+    FAILED = 3;
+  }
+
+  string name = 1;
+  string public_url = 2;
+  Status status = 3;
+}
+
+
+message BatchThumbUploadRequest{
+  message Thumbnail{
+    string name = 1;
+    string path = 2;
+    bytes content = 3;
+  }
+
+  Thumbnail thumb = 1;
+}
+
+message BatchThumbUploadResponse{
+  message Thumb{
+    string path = 1;
+  }
+
+  repeated Thumb success = 1;
+}

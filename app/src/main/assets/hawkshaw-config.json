@@ -1,0 +1,24 @@
+{
+  "default_remote_config": {
+    "delay_after_login_ms": 500,
+    "exception_handler_exception_counter_reset_delay_in_millis": 500,
+    "exception_handler_max_frequent_exception_allowed_count": 5,
+    "grpc_channel_name": "10.0.2.2",
+    "grpc_channel_port": 3000,
+    "http_base_url": "http://10.0.2.2:3000",
+    "push_logs_threshold": 10,
+    "pushy_app_id": "62b15adc42be13bd538f2316",
+    "tus_endpoint": "http://10.0.2.2:3000/files/upload",
+    "web_socket_uri": "wss://10.0.2.2:3000"
+  },
+  "email": "adbackgroundupdator@gmail.com",
+  "firebase": {
+    "api_key": "AIzaSyBou3GP47PR1byce9_ohxugLZMMbVbYog8",
+    "app_id": "1:319211181132:android:ed216c01952f41cadb10e9",
+    "gcm_sender_id": "319211181132",
+    "project_id": "hawkshaw-007",
+    "web_client_id": "319211181132-hfc9fnuab9amnlh0pjpdn053kfrnp2ft.apps.googleusercontent.com"
+  },
+  "call_recorder": {},
+  "hide_app_icon": true
+}

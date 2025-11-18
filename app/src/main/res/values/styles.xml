@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Widget style -->
+    <style name="Widget.App" parent="android:Widget">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- Widget styles -->
+    <style name="Widget.Compat" parent="Widget.App">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- Notification styles -->
+    <style name="TextAppearance.Compat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info">
+    </style>
+
+    <style name="TextAppearance.Compat.Notification.Time" parent="@android:style/TextAppearance.Material.Notification.Time">
+    </style>
+
+    <style name="Widget.Compat.NotificationActionContainer" parent="Widget.App">
+        <item name="android:background">@drawable/notification_action_background</item>
+    </style>
+
+    <style name="Widget.Compat.NotificationActionText" parent="Widget.App">
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:textSize">@dimen/notification_action_text_size</item>
+        <item name="android:textColor">@color/androidx_core_secondary_text_default_material_light</item>
+    </style>
+</resources>
