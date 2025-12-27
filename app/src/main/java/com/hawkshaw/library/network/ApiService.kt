@@ -64,7 +64,7 @@ class ApiService(private val context: Context) {
     suspend fun registerDevice(deviceInfo: DeviceRegistrationRequest): ApiResponse<DeviceRegistrationResponse> {
         return withContext(Dispatchers.IO) {
             val requestId = System.currentTimeMillis().toString()
-            val url = "$_baseUrl/api/devices/register"
+            val url = "$_baseUrl/api/auth/device/register"
             
             if (BuildConfig.DEBUG) {
                 Log.d(TAG, "[$requestId] Starting device registration to: $url")
